@@ -1,24 +1,54 @@
 body {
-  /* background-color: #79d279; */
-  background-color: #214545;
+
+  /* font-family: 'Amatic SC', cursive;
+  font-family: 'Abril Fatface', cursive;
+  font-family: 'Julius Sans One', sans-serif; */
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
 }
 
 .background {
   background-image: url(../Images/bensworkspace.jpg);
   background-size: cover;
   /* box-shadow: inset 0 0 0 1000px rgba(121,210,121,.5); */
-  box-shadow: inset 0 0 0 1000px rgb(89, 147, 31, .3);
+  box-shadow: inset 0 0 0 1000px rgb(66, 138, 102,.5);
+  min-height: 100vh;
 }
 .container {
   display: flex;
   flex-direction: column-reverse;
 }
 .main-nav {
+  list-style: none;
   display: flex;
   flex-direction: column;
+  margin: auto;
   flex: 1;
+  flex-wrap: wrap;
+  padding: 15px;
+}
+
+.main-nav li  {
+  text-align: center;
+  background-color: #79d279;
+  /* border-style: solid;
+  border-color: blue; */
+  height: 40px;
+  width: 125px;
+  padding: 10px 5px 10px 5px;
+  margin: .75em;
+  /* margin-right: 7px; */
+  border-radius: 5px;
+  box-shadow: 1px 1px 2px #53c653
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: white;
+  /* text-shadow: 1px 1px black; */
+  font-family: 'Amatic SC', cursive;
+  font-size: 1.5em;
 }
 
 header {
@@ -27,53 +57,89 @@ header {
   width: 100%;
 }
 
-h1 {
+.fade-in {
+  display: block;
+  height: 300px;
+}
+
+.name {
   /* padding-right: 1em; */
-  font-size: 3em;
+  margin-top: 30px;
+  font-size: 4.5em;
   text-decoration: none;
   color: white;
-  font-family: sans-serif;
+  font-family: 'Amatic SC', cursive;
   text-align: center;
+  text-shadow: 1px 1px 2px gray;
+
 }
 
 h2 {
-  font-size: 2em;
+  font-size: 3em;
   color: white;
-  font-family: sans-serif;
+  font-family: 'Amatic SC', cursive;
   text-align: center;
 }
 
-
-.main-nav li  {
-  background-color: #79d279;
-  padding: 10px 5px 10px 5px;
-  margin-top: 60px;
-  margin-right: 7px;
-  border-radius: 5px;
-  box-shadow: 1px 1px #53c653
+.skillSetList {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  color: white;
+  padding: inherit;
 }
 
-.main-nav a {
-  text-decoration: none;
-  color: white;
-  /* text-shadow: 1px 1px black; */
-  font-family:sans-serif;
+.skillSetList li {
+  padding: 0 .5em;
 }
 
 .profile-pic {
   display: flex;
   border-radius: 50%;
+  margin-top: 40px;
   margin-left: auto;
   margin-right: auto;
 }
 
 .social-media {
 
+  display: flex;
+  justify-content: space-between;
+  flex: 1;
+  margin-left: 30%;
+  margin-right: 30%;
 }
 
 .social-media a {
   text-decoration: none;
-  color:  #339933;
+  color:  white;
+
+}
+
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 30px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+}
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.fa-instagram {
+  background: #125688;
+  color: white;
 }
 
 footer ul {
@@ -84,7 +150,50 @@ footer ul {
 
 
 footer {
-  margin-top: 1em;
-  padding-top: 1em;
-  background-color: #9fdf9f;
+  /* margin-top: 1em;
+  padding-top: 1em; */
+  /* background-color: #9fdf9f; */
+  /* background-color: blue; */
+}
+
+/*************************
+Media Queries
+*************************/
+
+@media only screen and (min-width: 480px) {
+
+  .main-nav {
+    align-items: flex-start;
+    flex-direction: row;
+    justify-content: space-around;
+
+
+  }
+
+  .main-nav li {
+  }
+
+  .container {
+    flex-direction: column;
+  }
+
+
+}
+
+@media only screen and (min-width: 570px) {
+
+.fade-in {
+  height: 151px;
+  margin-bottom: 5%;
+}
+
+.skillSetList {
+  margin: auto;
+  flex-direction: row;
+  width: 55%;
+}
+
+.skillSetList li {
+  /* padding: .4em; */
+}
 }
