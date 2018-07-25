@@ -1,8 +1,10 @@
+// $('.name').animate({opacity:1}, 1500);
+
 $('.name').hide().fadeIn(1500);
 
 $('.skill').hide();
 
-var skillList = [".artist", ".copywriter", ".coder"]
+var skillList = [".coder", ".copywriter", ".artist"]
 
 var fadeIn = function(skill, i) {
     var delay = (i + 1) * 500;
