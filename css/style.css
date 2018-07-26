@@ -1,8 +1,6 @@
 body {
 
-  /* font-family: 'Amatic SC', cursive;
-  font-family: 'Abril Fatface', cursive;
-  font-family: 'Julius Sans One', sans-serif; */
+  /* font-family: 'Amatic SC', cursive; */
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -11,7 +9,6 @@ body {
 .background {
   background-image: url(../Images/bensworkspace.jpg);
   background-size: cover;
-  /* box-shadow: inset 0 0 0 1000px rgba(121,210,121,.5); */
   box-shadow: inset 0 0 0 1000px rgb(66, 138, 102,.5);
   min-height: 100vh;
   display: center;
@@ -33,16 +30,14 @@ body {
 .main-nav li  {
   text-align: center;
   background-color: #79d279;
-  /* border-style: solid;
-  border-color: blue; */
   height: 40px;
   width: 125px;
-  padding: 10px 5px 10px 5px;
+  // padding: 10px 5px 10px 5px;
   margin: .75em;
-  /* margin-right: 7px; */
   border-radius: 5px;
   box-shadow: 1px 1px 2px #53c653;
   transition: all .25s;
+  display: table;
 }
 
 .main-nav li:hover {
@@ -54,14 +49,13 @@ body {
 .main-nav a {
   text-decoration: none;
   color: white;
-  /* text-shadow: 1px 1px black; */
   font-family: 'Amatic SC', cursive;
   font-size: 1.5em;
+  display: table-cell;
+  vertical-align: middle;
 }
 
 header {
-  /* background-color: #9fdf9f; */
-  /* background-color: #576675; */
   width: 100%;
 }
 
@@ -71,11 +65,11 @@ header {
 }
 
 .name {
-  /* padding-right: 1em; */
   margin-top: 30px;
   font-size: 4.5em;
   text-decoration: none;
   color: white;
+  opacity: 0;
   font-family: 'Amatic SC', cursive;
   text-align: center;
   /* text-shadow: 1px 1px 2px gray; */
@@ -102,6 +96,7 @@ h2 {
 
 .skillSetList li {
   padding: 0 .5em;
+  opacity: 0;
 }
 
 .profile-pic {
@@ -118,12 +113,11 @@ h2 {
 }
 
 .social-media {
-
   display: flex;
   justify-content: space-between;
   flex: 1;
-  margin-left: 30%;
-  margin-right: 30%;
+  margin-left: 15%;
+  margin-right: 15%;
   padding: 0
 }
 
@@ -134,13 +128,12 @@ h2 {
 }
 
 .fa {
-    padding: 20px;
-    font-size: 30px;
-    /* width: 30px; */
-    text-align: center;
-    text-decoration: none;
-    margin: 5px 2px;
-    border-radius: 50%;
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
 }
 
 .fa-facebook {
@@ -159,23 +152,11 @@ h2 {
   color: white;
 }
 
-footer ul {
-
-}
-
-
-
-
 .main-footer {
   height: 66px;
   margin-top: 10px;
   margin-bottom: 30px;
 }
-  /* margin-top: 1em;
-  padding-top: 1em; */
-  /* background-color: #9fdf9f; */
-  /* background-color: blue; */
-
 
 /*************************
 Media Queries
@@ -187,34 +168,40 @@ Media Queries
     align-items: flex-start;
     flex-direction: row;
     justify-content: space-around;
-
-
-  }
-
-  .main-nav li {
   }
 
   .container {
     flex-direction: column;
   }
 
-
 }
 
 @media only screen and (min-width: 570px) {
 
-.fade-in {
-  /* height: 151px; */
-  margin-bottom: 5%;
+  .fade-in {
+    height: 151px;
+    margin-bottom: 5%;
+  }
+
+  .skillSetList {
+    margin: auto;
+    flex-direction: row;
+    width: 85%;
+  }
+
+  .skillSetList li {
+    padding: 0 .25em 0 .25em;
+  }
+
+  .social-media {
+    width: 385px;
+    margin: auto;
+  }
 }
 
-.skillSetList {
-  margin: auto;
-  flex-direction: row;
-  width: 85%;
-}
+@media only screen and (min-width: 992px) {
 
-.skillSetList li {
-  padding: 0 .25em 0 .25em;
-}
-}
+  .main-nav {
+    margin: unset;
+  }
+  }
