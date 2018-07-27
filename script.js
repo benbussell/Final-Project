@@ -1,10 +1,10 @@
 
 
-// $('.name').hide().fadeIn(1500);
+// fade in name
 $('.name').fadeTo(1500, 1);
 
-// $('.skill').hide();
 
+//fade in skills
 var skillList = [".coder", ".copywriter", ".artist"]
 
 var fadeThisIn = function(skill, i) {
@@ -13,6 +13,7 @@ var fadeThisIn = function(skill, i) {
 
 };
 
+// loop to stagger timing on skill fade-in
 for (i = 0; i <= skillList.length; i += 1) {
  fadeThisIn(skillList[i], i);
 };
