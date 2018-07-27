@@ -7,7 +7,7 @@ body {
 }
 
 .background {
-  background-image: url(../Images/bensworkspace.jpg);
+  background-image: url(../Img/bensworkspace.jpg);
   background-size: cover;
   box-shadow: inset 0 0 0 1000px rgb(66, 138, 102,.5);
   min-height: 100vh;
@@ -72,7 +72,7 @@ header {
   opacity: 0;
   font-family: 'Amatic SC', cursive;
   text-align: center;
-  
+
 
 }
 
